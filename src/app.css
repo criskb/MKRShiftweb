@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-brand-dark text-base-content font-body antialiased;
+  background-image: linear-gradient(180deg, rgba(20, 23, 29, 0.6), rgba(11, 13, 15, 0.95)),
+    radial-gradient(circle at top, rgba(212, 255, 61, 0.12), transparent 55%);
+  min-height: 100vh;
+}
+
+main {
+  @apply relative;
+}
+
+.glass-panel {
+  @apply bg-brand-surface/80 backdrop-blur-xl border border-brand-muted/40 shadow-glow;
+}
+
+.section-label {
+  @apply inline-flex items-center gap-2 rounded-full border border-brand-primary/30 bg-brand-surface/70 px-4 py-1 text-xs uppercase tracking-[0.25em] text-brand-primary/90;
+}
+
+.ring-hover {
+  @apply transition duration-200 ease-out hover:ring-2 hover:ring-brand-primary/50 hover:ring-offset-2 hover:ring-offset-brand-dark;
+}
+
+.card-grid {
+  @apply grid gap-6 sm:grid-cols-2 xl:grid-cols-3;
+}
+
+.hero-bg {
+  background: radial-gradient(circle at 20% 20%, rgba(212, 255, 61, 0.18), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(126, 244, 255, 0.16), transparent 45%);
+}
+
+.gradient-divider {
+  @apply h-px w-full bg-gradient-to-r from-transparent via-brand-primary/30 to-transparent;
+}
+
+.badge-soft {
+  @apply rounded-full bg-brand-muted/60 px-3 py-1 text-xs font-medium text-neutral-content/70;
+}
+
+.footer-link {
+  @apply transition-colors duration-200 hover:text-brand-primary;
+}
